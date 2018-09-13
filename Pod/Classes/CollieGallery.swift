@@ -156,6 +156,9 @@ open class CollieGallery: UIViewController, UIScrollViewDelegate, CollieGalleryV
         captionView.setNeedsLayout()
     }
     
+    // Allow this view controller specifically to rotate to landscape mode
+    @objc func canRotate() -> Void {}
+    
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -164,6 +167,11 @@ open class CollieGallery: UIViewController, UIScrollViewDelegate, CollieGalleryV
         }
         
         pagingScrollView.delegate = nil
+        
+        // Allow this view controller specifically to rotate to landscape mode
+        if (self.isMovingFromParentViewController) {
+            UIDevice.current.setValue(Int(UIInterfaceOrientation.portrait.rawValue), forKey: "orientation")
+        }
     }
     
     open override func didReceiveMemoryWarning() {
