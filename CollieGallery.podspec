@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "CollieGallery"
-  s.version          = "0.6.0"
+  s.version          = "0.6.1"
   s.summary          = "Easy-to-use and highly customizable fullscreen image gallery with support for local and remote images written in Swift."
 
   s.description      = <<-DESC
@@ -11,7 +11,7 @@ DESC
   s.screenshots     = "http://gmunhoz.com/public/controls/CollieGallery/screenshots/1.gif", "http://gmunhoz.com/public/controls/CollieGallery/screenshots/2.gif", "http://gmunhoz.com/public/controls/CollieGallery/screenshots/3.gif", "http://gmunhoz.com/public/controls/CollieGallery/screenshots/4.gif"
   s.license          = 'MIT'
   s.author           = { "Guilherme Munhoz" => "g.araujo.munhoz@gmail.com" }
-  s.source           = { :git => "https://github.com/gmunhoz/CollieGallery.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/kaskajp/CollieGallery.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
